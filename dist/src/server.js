@@ -5,6 +5,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 Object.defineProperty(exports, "__esModule", { value: true });
 const database_config_1 = __importDefault(require("./config/database.config"));
 const app_1 = __importDefault(require("./app"));
+require('dotenv').config();
 database_config_1.default.sync()
     .then(() => {
     console.log('connected to database');
@@ -12,7 +13,7 @@ database_config_1.default.sync()
     .catch((err) => {
     console.log('error connecting to database', err);
 });
-const PORT = 5000;
+const PORT = process.env.PORT || 5000;
 app_1.default.listen(PORT, () => {
     console.log(`Server is running on port ${PORT}`);
 });
