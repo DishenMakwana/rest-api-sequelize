@@ -1,0 +1,34 @@
+{
+    "name": "rest-api-sequelize",
+    "version": "1.0.0",
+    "description": "Build TODO's CRUD rest API with typescript + Express.js + Sequelize + Sqlite3",
+    "main": "index.js",
+    "scripts": {
+        "dev": "ts-node-dev --respawn src/server.ts",
+        "build": "tsc",
+        "start": "node dist/src/server.js",
+        "test": "jest"
+    },
+    "author": "DISHEN",
+    "license": "ISC",
+    "devDependencies": {
+        "@types/express": "^4.17.13",
+        "@types/jest": "^27.4.0",
+        "@types/morgan": "^1.9.3",
+        "@types/supertest": "^2.0.11",
+        "@types/uuid": "^8.3.4",
+        "jest": "^27.4.7",
+        "morgan": "^1.10.0",
+        "supertest": "^6.2.2",
+        "ts-jest": "^27.1.3",
+        "ts-node-dev": "^1.1.8",
+        "typescript": "^4.5.5"
+    },
+    "dependencies": {
+        "express": "^4.17.2",
+        "express-validator": "^6.14.0",
+        "sequelize": "^6.15.0",
+        "sqlite3": "^5.0.2",
+        "uuid": "^8.3.2"
+    }
+}
